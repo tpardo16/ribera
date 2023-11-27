@@ -1,0 +1,33 @@
+.home{
+    background-image: url(../../img/bg.jpg);
+    height: 100vh;
+    min-height: 60rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeBox{
+    width: 95%;
+    max-width: 90rem;
+    text-align: center;
+
+    h2{
+        color: $white;
+        font-size: 8rem;
+        margin-bottom: 1.5rem;
+
+        @include desktop{
+            font-size: 6rem;
+        }
+    }
+
+    p{
+        color: $white;
+    }
+
+    .btn{
+        @include btn;
+    }
+}

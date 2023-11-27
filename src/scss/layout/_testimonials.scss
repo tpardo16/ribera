@@ -1,0 +1,65 @@
+.testimonials{
+    background-image: url(../../img/bg2.jpg);
+    padding: 10rem 0;
+
+    .titleBox{
+        text-align: center;
+
+        .title{
+            @include title;
+            color: $white;
+        }
+
+        p{
+            color: $white;
+        }
+    }
+}
+
+.testimonials{
+    .content{
+        margin: 4rem auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @include desktop {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box{
+            width: 30%;
+            background-color: $white;
+            padding: 5rem;
+            @include desktop {
+                width: 45%;
+                margin: 1rem;
+            }
+            @include mobile {
+                width: 100%;
+            }
+
+            .imgBox{
+                text-align: center;
+                margin-bottom: 2rem;
+
+                img{
+                    border-radius: 50%;
+                    width: 10rem;
+                }
+            }
+
+            .text{
+                text-align: center;
+
+                h3{
+                    color: $carmine;
+                    margin-top: 2rem;
+                }
+
+                p{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

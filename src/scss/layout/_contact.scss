@@ -1,0 +1,54 @@
+.contact{
+    background-image: url(../../img/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+
+    .titleBox{
+        text-align: center;
+
+        .title{
+            @include title;
+        }
+    }
+}
+
+.content{
+    margin: 4rem auto 0 auto;
+    display: flex;
+    justify-content: left;
+    @include mobile {
+        justify-content: center;
+    }
+
+    .contactForm{
+        box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .5);
+        padding: 8rem 5rem;
+        @include mobile {
+            padding: 5rem 1rem;
+        }
+
+        h3{
+            margin: 2rem;
+            font-weight: 500;
+        }
+
+        .inputBox{
+            margin: 2rem;
+
+            input,
+            textarea{
+                padding: 1rem;
+                max-width: 100%;
+                min-width: 100%;
+                resize: none
+            }
+
+            input[type='submit']{
+                @include btn;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

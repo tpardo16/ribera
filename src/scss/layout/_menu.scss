@@ -1,0 +1,42 @@
+.menu{
+    padding: 10rem 0;
+
+    .titleBox{
+        text-align: center;
+        
+        .title{
+            @include title;
+        }
+    }
+}
+
+.menu{
+    .content{
+        margin: 4rem auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .box{
+            width: 30%;
+            box-shadow:  0 .5rem 2rem rgba(0, 0, 0, .5);
+            margin: 1rem;
+            padding: 3rem;
+            @include desktop {
+                width: 45%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+
+            h3{
+                font-weight: 400;
+                padding-top: .5rem;
+            }
+        }
+    }
+
+    .btn{
+        @include btn;
+    }
+}

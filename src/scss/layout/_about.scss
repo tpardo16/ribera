@@ -1,0 +1,37 @@
+.about{
+    display: flex;
+    justify-content: center;
+
+    .content{
+        padding: 10rem;
+        display: flex;
+        justify-content: space-between;
+        @include desktop {
+            flex-direction: column;
+            padding: 5rem 0;
+        }
+
+        .column50{
+            width: 48%;
+            @include desktop {
+                width: 100%
+            }
+        }
+    }
+}
+
+.column50{
+    .title{
+        @include title;
+    }
+    .imgBox{
+        height: 100%;
+        @include desktop {
+            margin-top: 2rem;
+        }
+
+        img{
+            height: 100%;
+        }
+    }
+}

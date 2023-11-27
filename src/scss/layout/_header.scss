@@ -1,0 +1,102 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10rem;
+    transition: .5s;
+    @include desktop {
+        padding: 2rem 5rem;
+
+        .menu-toogle{
+            position: relative;
+            background-image: url(../../img/menu.png);
+            width: 4rem;
+            height: 4rem;
+            background-size: 3rem;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            background-position: center;
+        }
+
+        .active{
+            background-image: url(../../img/close.png);
+            background-size: 2.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .logo{
+        font-size: 4rem;
+        color: $white;
+        font-weight: 700;
+
+        span{
+            color: $carmine;
+        }
+    }
+
+    nav{
+        @include desktop {
+            display: none;
+
+            &.active{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 7.6rem;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: $white;
+
+                a{
+                    font-size: 2.5rem;
+                    color: $black;
+                    font-weight: 300;
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        a{
+            color: $white;
+            margin-left: 2rem;
+    
+            &:hover{
+                color: $carmine;
+            }
+        }
+    }
+}
+
+header.sticky{
+    background-color: $white;
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .5);
+    padding: 2rem 10rem;
+    @include desktop {
+        padding: 1.5rem 5rem;
+
+        .menu-toogle{
+            filter: invert(1);
+        }
+    }
+
+    .logo{
+        color: $black;
+    }
+
+    a{
+        color: $black;
+
+        &:hover{
+            color: $carmine;
+        }
+    }
+}
